@@ -30,7 +30,24 @@ Describe the flow of your program step by step in your own words, without worryi
 
 How to write good pseudocode is explained in [Introduction to Pseudocode](03_intro_to_pseudocode.md).
 
-> Alternative: If you think more visually, you can draw the flow as a **flowchart** instead of (or in addition to) pseudocode. Boxes are steps, diamonds are decisions.
+``` Pseudo
+STORE empty 3x3 grid, active player p1
+REPEAT
+   OUTPUT active player's turn, current grid
+   INPUT active player inputs position of mark on empty field
+   STORE active players (distinct) symbol at position of mark  
+   IF the active player has 3 in a row, column or diagonal
+      active player won
+   ELSE IF grid full
+	   end
+   ELSE other player (only 2 players) becomes active player
+UNTIL active player won or grid full 
+OUTPUT
+    IF active player won
+        OUTPUT active player won
+    ELSE
+        OUTPUT "Draw"
+```
 
 ---
 
