@@ -1,0 +1,19 @@
+STORE empty 3x3 grid, active player p1
+REPEAT
+   OUTPUT active player's turn, current grid
+   REPEAT
+      INPUT active player inputs position of mark on empty field
+   UNTIL valid position entry
+   STORE active players (distinct) symbol at position of mark  
+   IF the active player has 3 in a row, column or diagonal
+      STORE winner = active player
+   ELSE IF grid full
+       end
+   ELSE other player (only 2 players) becomes active player
+UNTIL active player won or grid full 
+OUTPUT
+    IF active player won
+        OUTPUT active player won
+    ELSE
+        OUTPUT "Draw"
+OUTPUT final grid
